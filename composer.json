@@ -1,6 +1,6 @@
 {
-    "name": "watson/rememberable",
-    "description": "Query caching for Laravel",
+    "name": "gnahotelsolutions/laravel-query-cache",
+    "description": "Query caching for Laravel 6+",
     "keywords": [
         "laravel",
         "eloquent",
@@ -12,16 +12,20 @@
         {
             "name": "Dwight Watson",
             "email": "dwight@studiousapp.com"
+        },
+        {
+            "name": "David Llop",
+            "email": "dllop@gnahs.com"
         }
     ],
     "require": {
-        "php": "^7.3",
-        "illuminate/database": "^8.0",
-        "illuminate/support": "^8.0"
+        "php": "^7.1",
+        "illuminate/database": "^6.0|^7.0|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0"
     },
     "autoload": {
         "psr-4": {
-            "Watson\\Rememberable\\": "src/"
+            "GNAHotelSolutions\\LaravelQueryCache\\": "src/"
         }
     }
 }
