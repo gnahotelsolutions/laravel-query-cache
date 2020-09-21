@@ -2,7 +2,7 @@
 
 namespace GNAHotelSolutions\LaravelQueryCache;
 
-use GNAHotelSolutions\QueryCache\Query\Builder;
+use GNAHotelSolutions\LaravelQueryCache\Query\Builder;
 
 trait Rememberable
 {
