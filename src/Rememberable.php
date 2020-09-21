@@ -1,8 +1,8 @@
 <?php
 
-namespace Watson\Rememberable;
+namespace GNAHotelSolutions\LaravelQueryCache;
 
-use Watson\Rememberable\Query\Builder;
+use GNAHotelSolutions\QueryCache\Query\Builder;
 
 trait Rememberable
 {

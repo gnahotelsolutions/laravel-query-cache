@@ -1,6 +1,6 @@
 <?php
 
-namespace Watson\Rememberable\Query;
+namespace GNAHotelSolutions\LaravelQueryCache\Query;
 
 use DateTime;
 

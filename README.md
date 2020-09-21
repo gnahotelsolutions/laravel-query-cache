@@ -1,18 +1,20 @@
-Rememberable, Laravel 5 query cache
+Laravel Query Cache
 ===================================
 
-[![Total Downloads](https://poser.pugx.org/watson/rememberable/downloads.svg)](https://packagist.org/packages/watson/rememberable)
-[![Latest Stable Version](https://poser.pugx.org/watson/rememberable/v/stable.svg)](https://packagist.org/packages/watson/rememberable)
-[![Latest Unstable Version](https://poser.pugx.org/watson/rememberable/v/unstable.svg)](https://packagist.org/packages/watson/rememberable)
-[![License](https://poser.pugx.org/watson/rememberable/license.svg)](https://packagist.org/packages/watson/rememberable)
+[![Total Downloads](https://poser.pugx.org/gnahotelsolutions/laravel-query-cache/downloads.svg)](https://packagist.org/packages/gnahotelsolutions/laravel-query-cache)
+[![Latest Stable Version](https://poser.pugx.org/gnahotelsolutions/laravel-query-cache/v/stable.svg)](https://packagist.org/packages/gnahotelsolutions/laravel-query-cache)
+[![Latest Unstable Version](https://poser.pugx.org/gnahotelsolutions/laravel-query-cache/v/unstable.svg)](https://packagist.org/packages/gnahotelsolutions/laravel-query-cache)
+[![License](https://poser.pugx.org/gnahotelsolutions/laravel-query-cache/license.svg)](https://packagist.org/packages/gnahotelsolutions/laravel-query-cache)
 
-Rememberable is an Eloquent trait for Laravel that adds `remember()` query methods. This makes it super easy to cache your query results for an adjustable amount of time.
+This package is forked from [dwightwatson/rememberable](https://github.com/dwightwatson/rememberable) for flexibility in our company projects. Thank you for your package [Dwight Watson](https://github.com/dwightwatson) ❤️
+
+Laravel Query Cache is an Eloquent trait for Laravel that adds `remember()` query methods. This makes it super easy to cache your query results for an adjustable amount of time.
 
 ```php
-// Get a the first user's posts and remember them for a day.
+// Get the first user's posts and remember them for a day.
 User::first()->remember(now()->addDay())->posts()->get();
 
-// You can also pass the number of seconds if you like (before Laravel 5.8 this will be interpreted as minutes).
+// You can also pass the number of seconds if you like.
 User::first()->remember(60 * 60 * 24)->posts()->get();
 ```
 
@@ -23,7 +25,7 @@ It works by simply remembering the SQL query that was used and storing the resul
 Install using Composer, just as you would anything else.
 
 ```sh
-composer require watson/rememberable
+composer require gnahotelsolutions/laravel-query-cache
 ```
 
 The easiest way to get started with Eloquent is to create an abstract `App\Model` which you can extend your application models from. In this base model you can import the rememberable trait which will extend the same caching functionality to any queries you build off your model.
@@ -32,7 +34,7 @@ The easiest way to get started with Eloquent is to create an abstract `App\Model
 <?php
 namespace App;
 
-use Watson\Rememberable\Rememberable;
+use GNAHotelSolutions\LaravelQueryCache\Rememberable;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 abstract class Model extends Eloquent
